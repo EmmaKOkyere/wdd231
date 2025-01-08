@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #274e75;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+h1 {
+    padding: 0%;
+    margin-left: 20px;
+}
+
+h2 {
+    padding: 0%;
+    display: block;
+    background-color: #274e75
+}
+
+p {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+    font-size: larger;
+}
+
+.profile-pic {
+    width: 150px;
+    height: auto;
+}
+
+ul li {
+    color: black;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    background-color: black;
+    padding: 0%;
+    font-size: xx-large
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.course-work,
+.location {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 45%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.location img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.certificate-section {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filter-buttons button,
+.courses button {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #914d2a;
+    color: white;
+    cursor: pointer;
+}
+
+.filt-butt {
+    background-color: #080808;
+    color: #f4f4f4;
+    margin-left: 20px;
+
+}
+
+.filter-buttons button:hover,
+.courses button:hover {
+    background-color: #722e1a;
+}
+
+footer {
+    text-align: center;
+    background-color: #274e75;
+    color: white;
+    padding: 10px 0;
+}
+
+footer img {
+    width: 25px;
+    margin-top: 5px;
+}
