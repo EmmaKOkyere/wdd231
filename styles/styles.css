@@ -1,5 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Roboto", serif;
+    font-weight: 400;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -22,11 +23,13 @@ header {
 h1 {
     padding: 0%;
     margin-left: 20px;
+    font-weight: 100;
+
 }
 
 h2 {
     padding: 0%;
-    display: block;
+    display: flex;
     background-color: #274e75
 }
 
