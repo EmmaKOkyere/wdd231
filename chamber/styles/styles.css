@@ -14,6 +14,15 @@ body {
     color: rgb(18, 17, 17); /* White text for body */
 }
 
+@media (max-width: 768px) {  
+    .container {  
+        flex-direction: column; /* Stack items on small screens */  
+    }  
+    .item {  
+        width: 100%; /* Full width on smaller screens */  
+    }  
+}
+
 header {  
     display: flex;  
     justify-content: space-between;  
