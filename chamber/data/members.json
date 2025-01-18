@@ -1,65 +1,26 @@
 [  
     {  
-        "name": "Company A",  
-        "address": "123 Main St, Timbuktu",  
-        "phone": "800-555-0001",  
-        "website": "https://companya.com",  
-        "image": "images/company-a.png",  
-        "membershipLevel": 1,  
-        "additionalInfo": "Member since 2022"  
+        "name": "Grand Pacific Resorts, Inc.",  
+        "address": "5900 Pasteur CT., Ste. 200, Carlsbad, CA 92008",  
+        "phone": "(760) 431-8500",  
+        "membership": "Member Since 1996",  
+        "website": "https://www.grandpacificresorts.com/",  
+        "image": "images/business1.jpg"  
     },  
     {  
-        "name": "Company B",  
-        "address": "456 Elm St, Timbuktu",  
-        "phone": "800-555-0002",  
-        "website": "https://companyb.com",  
-        "image": "images/company-b.png",  
-        "membershipLevel": 2,  
-        "additionalInfo": "Member since 2021"  
+        "name": "Holiday Inn, Carlsbad.",  
+        "address": "2725 Palomar Airport Rd., Carlsbad, CA 92009",  
+        "phone": "(760) 438-2725",  
+        "membership": "Member Since 2013",  
+        "website": "https://www.ihg.com/holidayinn/hotels/us/en/carlsbad/ocnhi/hoteldetail",  
+        "image": "images/business2.png"  
     },  
     {  
-        "name": "Company C",  
-        "address": "789 Maple St, Timbuktu",  
-        "phone": "800-555-0003",  
-        "website": "https://companyc.com",  
-        "image": "images/company-c.png",  
-        "membershipLevel": 3,  
-        "additionalInfo": "Member since 2020"  
-    },  
-    {  
-        "name": "Company D",  
-        "address": "101 Oak St, Timbuktu",  
-        "phone": "800-555-0004",  
-        "website": "https://companyd.com",  
-        "image": "images/company-d.png",  
-        "membershipLevel": 1,  
-        "additionalInfo": "Member since 2019"  
-    },  
-    {  
-        "name": "Company E",  
-        "address": "202 Pine St, Timbuktu",  
-        "phone": "800-555-0005",  
-        "website": "https://companye.com",  
-        "image": "images/company-e.png",  
-        "membershipLevel": 2,  
-        "additionalInfo": "Member since 2023"  
-    },  
-    {  
-        "name": "Company F",  
-        "address": "303 Birch St, Timbuktu",  
-        "phone": "800-555-0006",  
-        "website": "https://companyf.com",  
-        "image": "images/company-f.png",  
-        "membershipLevel": 3,  
-        "additionalInfo": "Member since 2022"  
-    },  
-    {  
-        "name": "Company G",  
-        "address": "404 Cedar St, Timbuktu",  
-        "phone": "800-555-0007",  
-        "website": "https://companyg.com",  
-        "image": "images/company-g.png",  
-        "membershipLevel": 1,  
-        "additionalInfo": "Member since 2021"  
+        "name": "LEGOLAND California Resort",  
+        "address": "One LEGOLAND Dr., Carlsbad, CA 92008",  
+        "phone": "(760) 918-5300",  
+        "membership": "Member Since 1994",  
+        "website": "https://www.legoland.com/california",  
+        "image": "images/business3.jpg"  
     }  
 ]

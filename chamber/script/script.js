@@ -1,49 +1,37 @@
-async function fetchMembers() {  
-    const response = await fetch('data/members.json');  
-    const members = await response.json();  
-    return members;  
-}  
+// script.js  
+document.addEventListener('DOMContentLoaded', () => {  
+    loadBusinessData(); // Load business data when the DOM is ready  
+});  
 
-function displayMembers(members, viewType) {  
-    const memberList = document.getElementById('member-list');  
-    memberList.innerHTML = '';  
+async function loadBusinessData() {  
+    try {  
+        const response = await fetch('businesses.json'); // Fetch the JSON file  
+        if (!response.ok) {  
+            throw new Error('Network response was not ok: ' + response.status);  
+        }  
+        const data = await response.json(); // Parse the JSON data  
+        
+        const businessList = document.getElementById('business-list');  
 
-    if (viewType === 'grid') {  
-        members.forEach(member => {  
-            memberList.innerHTML += `  
-                <div class="card">  
-                    <img src="${member.image}" alt="${member.name}">  
-                    <h3>${member.name}</h3>  
-                    <p>${member.address}</p>  
-                    <p>${member.phone}</p>  
-                    <a href="${member.website}">Visit Website</a>  
-                </div>  
+        // Clear previous entries (if any)  
+        businessList.innerHTML = '';  
+
+        data.forEach(business => {  
+            const businessCard = document.createElement('div');  
+            businessCard.classList.add('business-card');  
+
+            businessCard.innerHTML = `  
+                <img class="image-size" src="${business.image}" alt="${business.name}">  
+                <h4>${business.name}</h4>  
+                <p>Address: ${business.address}</p>  
+                <p>Phone: ${business.phone}</p>  
+                <p>Membership: ${business.membership}</p>  
+                <a href="${business.website}" target="_blank">Visit Website</a>  
             `;  
+
+            businessList.appendChild(businessCard); // Append the card to the list  
         });  
-    } else {  
-        members.forEach(member => {  
-            memberList.innerHTML += `  
-                <div class="list-item">  
-                    <h3>${member.name}</h3>  
-                    <p>${member.address}</p>  
-                    <p>${member.phone}</p>  
-                </div>  
-            `;  
-        });  
+    } catch (error) {  
+        console.error('Error fetching the business data:', error);  
     }  
-}  
-
-document.addEventListener('DOMContentLoaded', async () => {  
-    const members = await fetchMembers();  
-    let viewType = 'grid';  
-    displayMembers(members, viewType);  
-
-    document.getElementById('toggle-view').addEventListener('click', () => {  
-        viewType = (viewType === 'grid') ? 'list' : 'grid';  
-        displayMembers(members, viewType);  
-    });  
-
-    // Display last modified date  
-    const lastModified = new Date(document.lastModified);  
-    document.getElementById('last-modified').textContent = lastModified.toLocaleString();  
-});
+}
