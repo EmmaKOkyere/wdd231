@@ -166,16 +166,19 @@ footer {
     justify-content: space-between;
     align-items: center;
 }
+footer {  
+    text-align: center; /* Center text within the footer */  
+}  
 
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 100%;
-    width: 100%;
-    gap: 20px;
-    flex-wrap: wrap;
-    /* Allow wrapping */
+.footer-container {  
+    display: flex;  
+    justify-content: space-between; /* Center items horizontally */  
+    align-items: center; /* Center items vertically */  
+    gap: 20px; /* Spacing between items */  
+    flex-wrap: wrap; /* Allow items to wrap */  
+    max-width: 1200px; /* Set a maximum width for better layout */  
+    margin: 0 auto; /* Center the container itself */  
+    padding: 20px; /* Optional: Add some padding */  
 }
 
 .footer-left,
