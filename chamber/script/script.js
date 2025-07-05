@@ -1,37 +1,48 @@
-// script.js  
-document.addEventListener('DOMContentLoaded', () => {  
-    loadBusinessData(); // Load business data when the DOM is ready  
-});  
+document.addEventListener('DOMContentLoaded', () => {
+    // Fetch Weather Data
+    fetchWeatherData();
 
-async function loadBusinessData() {  
-    try {  
-        const response = await fetch('businesses.json'); // Fetch the JSON file  
-        if (!response.ok) {  
-            throw new Error('Network response was not ok: ' + response.status);  
-        }  
-        const data = await response.json(); // Parse the JSON data  
-        
-        const businessList = document.getElementById('business-list');  
+    // Fetch Spotlight Data
+    fetchSpotlightData();
+});
 
-        // Clear previous entries (if any)  
-        businessList.innerHTML = '';  
+function fetchWeatherData() {
+    const apiKey = 'YOUR_API_KEY'; // Replace with your OpenWeatherMap API key
+    const city = 'San Miguel'; // Replace with your chamber location
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-        data.forEach(business => {  
-            const businessCard = document.createElement('div');  
-            businessCard.classList.add('business-card');  
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            const weatherData = `
+                <p>Temperature: ${data.main.temp} °C</p>
+                <p>Description: ${data.weather[0].description}</p>
+            `;
+            document.getElementById('weather-data').innerHTML = weatherData;
+        })
+        .catch(err => console.error(err));
+}
 
-            businessCard.innerHTML = `  
-                <img class="image-size" src="${business.image}" alt="${business.name}">  
-                <h4>${business.name}</h4>  
-                <p>Address: ${business.address}</p>  
-                <p>Phone: ${business.phone}</p>  
-                <p>Membership: ${business.membership}</p>  
-                <a href="${business.website}" target="_blank">Visit Website</a>  
-            `;  
+function fetchSpotlightData() {
+    // Placeholder: Replace with actual data fetching logic
+    const spotlightMembers = [
+        { name: 'Company A', logo: 'images/company-a-logo.png', phone: '123-456-7890', address: '123 Street, San Miguel', website: 'http://companya.com', level: 'Gold' },
+        { name: 'Company B', logo: 'images/company-b-logo.png', phone: '987-654-3210', address: '456 Avenue, San Miguel', website: 'http://companyb.com', level: 'Silver' }
+    ];
 
-            businessList.appendChild(businessCard); // Append the card to the list  
-        });  
-    } catch (error) {  
-        console.error('Error fetching the business data:', error);  
-    }  
+    const spotlightContainer = document.getElementById('spotlight-container');
+
+    spotlightMembers.forEach(member => {
+        const spotlightCard = `
+            <div class="spotlight-card">
+                <img src="${member.logo}" alt="${member.name} Logo">
+                <h3>${member.name}</h3>
+                <p>Phone: ${member.phone}</p>
+                <p>Address: ${member.address}</p>
+                <p>Website: <a href="${member.website}">${member.website}</a></p>
+                <p>Membership Level: ${member.level}</p>
+            </div>
+        `;
+        spotlightContainer.innerHTML += spotlightCard;
+    });
 }

@@ -1,12 +1,9 @@
 /* styles.css */
 :root {
-    --primary-color: #4a2c91;
-    /* Darker shade for better contrast */
-    --secondary-color: #d95f6d;
-    /* Darker shade for better contrast */
+    --primary-color: #6a5acd;
+    --secondary-color: rgb(248, 127, 147);
     --background-color: #1a1616d7;
     --header-color: #ad76e5;
-    /* Remains the same */
 }
 
 body {
@@ -16,7 +13,7 @@ body {
     padding: 0;
     background-color: var(--background-color);
     color: rgb(18, 17, 17);
-    /* Body text color */
+    /* White text for body */
 }
 
 header {
@@ -37,7 +34,7 @@ header .logo {
 
 header .logo img {
     margin-right: 10px;
-    /* Space between the image and text */
+    /* Add space between the image and text */
     width: 80px;
     /* Responsive logo size */
 }
@@ -101,7 +98,6 @@ main {
 
 h2 {
     color: white;
-    font-size: 2.5rem;
 }
 
 .content {
@@ -115,54 +111,21 @@ h2 {
 .weather,
 .forecast {
     flex: 1 1 300px;
-    /* Allow sections to be flexible */
+    /* Allow flex items to grow and shrink */
     padding: 10px;
     background-color: var(--secondary-color);
     border: 1px solid var(--primary-color);
     border-radius: 5px;
     color: white;
-    /* Text inside sections */
+    /* Ensure text inside sections is white */
 }
 
-/* Add the following to your styles.css */  
-
-/* Default grid styles */  
-.business-list {  
-    display: flex;  
-    flex-wrap: wrap;  
-    gap: 20px; /* spacing between cards */  
-}  
-
-.business-card {  
-    flex: 1 1 300px; /* Card width in grid view */  
-}  
-
-/* List view styles */  
-.list-view .business-list {  
-    flex-direction: column; /* Stack cards vertically */  
-}  
-
-.list-view .business-card {  
-    flex: 1 1 100%; /* Full width for list view */  
-    margin-bottom: 10px; /* Space between list items */  
-}  
-
-.view-toggle {  
-    margin: 20px 0; /* Spacing above and below the toggle buttons */  
-    text-align: center; /* Center the toggle buttons */  
-}  
-
-.view-toggle button {  
-    padding: 10px 15px;  
-    margin: 0 5px;  
-    border: 1px solid var(--primary-color);  
-    background-color: var(--secondary-color);  
-    color: white;  
-    cursor: pointer;  
-}  
-
-.view-toggle button.active {  
-    background-color: var(--primary-color); /* Highlight active button */  
+.business-list {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow wrapping */
+    gap: 20px;
+    margin-top: 20px;
 }
 
 .business-card {
@@ -173,165 +136,4 @@ h2 {
     flex: 1 1 300px;
     /* Allow cards to grow and shrink */
     color: white;
-    /* Text color for business cards */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.business-card h4,
-.business-card p {
-    margin: 5px 0;
-    /* Space between text elements */
-}
-
-.image-size {
-    max-width: 100%;
-    /* Make images responsive */
-    height: auto;
-    /* Maintain aspect ratio */
-}
-
-footer {
-    background-color: var(--secondary-color);
-    color: #fcf4f4;
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    /* Allow wrapping */
-    justify-content: space-between;
-    align-items: center;
-}
-
-footer {
-    text-align: center;
-    /* Center text within the footer */
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    /* Center items horizontally */
-    align-items: center;
-    /* Center items vertically */
-    gap: 20px;
-    /* Spacing between items */
-    flex-wrap: wrap;
-    /* Allow items to wrap */
-    max-width: 1200px;
-    /* Set a maximum width for better layout */
-    margin: 0 auto;
-    /* Center the container itself */
-    padding: 20px;
-    /* Optional: Add some padding */
-}
-
-.footer-left,
-.footer-right {
-    flex: 1 1 200px;
-    /* Flexible min-width for responsiveness */
-}
-
-footer .social-links {
-    display: flex;
-    gap: 10px;
-    /* Space between social icons */
-}
-
-footer .social-links a {
-    text-decoration: none;
-    /* Remove underline */
-}
-
-footer .social-links img {
-    width: 30px;
-    height: 30px;
-    object-fit: cover;
-    border-radius: 20%;
-    /* Rounded social icons */
-}
-
-.footer-left p,
-.footer-right p {
-    margin: 5px 0;
-    /* Space between footer text */
-    font-size: 14px;
-}
-
-.footer-right p {
-    text-align: right;
-    /* Align text to the right */
-
-
-}
-
-@media (max-width: 768px) {
-
-    header,
-    footer {
-        flex-direction: column;
-        /* Stack items on small screens */
-        text-align: center;
-        /* Center text */
-    }
-
-    .hero-button {
-        margin: 0;
-        /* Reset margin for center alignment */
-    }
-}
-
-@media (max-width: 480px) {
-    nav ul {
-        flex-direction: column;
-        /* Stack navigation items vertically */
-    }
-
-    h2 {
-        font-size: 22px;
-        /* Make headings smaller on mobile */
-    }
-
-    .business-card {
-        flex: 1 1 100%;
-        /* Make business cards take full width */
-    }
-}
-
-.footer-left,
-.footer-right {
-    flex: 1;
-    /* Flex property for better responsive behavior */
-    padding: 10px;
-    /* Add some padding for better spacing */
-}
-
-.footer-container {
-    align-items: center;
-    /* Center footer items */
-}
-
-@media (max-width: 1200px) {
-    .content {
-        flex-direction: column;
-        align-items: center;
-        /* Center-align sections in smaller viewports */
-    }
-
-    .events,
-    .weather,
-    .forecast {
-        flex: 1 1 100%;
-        /* Allow sections to take full width on smaller screens */
-        margin-bottom: 20px;
-        /* Space between sections */
-    }
-
-    .business-list {
-        flex-direction: column;
-        /* Stack business cards vertically */
-        align-items: center;
-        /* Center cards on smaller screens */
-    }
-}
+    /*
