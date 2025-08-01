@@ -1285,3 +1285,42 @@ img {
         height: auto;
         margin-bottom: 20px;
     }
+
+    .card img {
+    transition: transform 0.3s;
+}
+
+.card img:hover {
+    transform: scale(1.05);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+        "card1 card2 card3 card4"
+        "card5 card6 card7 card8";
+    gap: 20px;
+}
+
+@media (max-width: 640px) {
+    .grid-container {
+        grid-template-areas:
+            "card1"
+            "card2"
+            "card3"
+            "card4"
+            "card5"
+            "card6"
+            "card7"
+            "card8";
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    .grid-container {
+        grid-template-areas: 
+            "card1 card2 card3"
+            "card4 card5 card6"
+            "card7 card8 card8";
+    }
+}

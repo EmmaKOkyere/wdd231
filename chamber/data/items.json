@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Item 1",
+        "address": "123 Main St, City, State, Zip",
+        "description": "Description of item 1.",
+        "image": "images/item1.webp"
+    },
+    {
+        "title": "Item 2",
+        "address": "456 Elm St, City, State, Zip",
+        "description": "Description of item 2.",
+        "image": "images/item2.webp"
+    }
+]
