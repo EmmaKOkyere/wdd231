@@ -1,0 +1,81 @@
+/* Reset and Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+/* Header Styles */
+header {
+    background-color: #007bff;
+    padding: 1em;
+    text-align: center;
+}
+
+.position {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+/* Main Content Styles */
+main {
+    padding: 1em;
+    background-color: #fff;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1em 0;
+}
+
+/* Event and Book Card Styles */
+.event-card, .book-card {
+    background-color: #e7f3ff;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+.event-card h3, .book-card h3 {
+    color: #007bff;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #007bff;
+    text-align: center;
+    padding: 1em;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+}
