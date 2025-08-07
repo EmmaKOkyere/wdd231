@@ -3,7 +3,7 @@
 // Fetch data from a local JSON file or API
 async function fetchData() {
     try {
-        const response = await fetch('data/books.json'); // Adjust path as necessary
+        const response = await fetch('data/books.json'); 
         if (!response.ok) throw new Error('Network response was not ok');
         const data = await response.json();
         displayBooks(data);
@@ -15,7 +15,7 @@ async function fetchData() {
 // Display books dynamically
 function displayBooks(books) {
     const bookGrid = document.querySelector('.book-grid');
-    bookGrid.innerHTML = ''; // Clear existing content
+    bookGrid.innerHTML = '';
     books.forEach(book => {
         const bookCard = document.createElement('article');
         bookCard.classList.add('book-card');
@@ -30,3 +30,6 @@ function displayBooks(books) {
 
 // Call fetchData on page load
 document.addEventListener('DOMContentLoaded', fetchData);
+
+currentYear.textContent = new Date().getFullYear();
+lastModified.textContent = document.lastModified;
